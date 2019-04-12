@@ -1,5 +1,3 @@
-// This script is an altered version of the CodePen made by 'Captain Anonymous': https://codepen.io/anon/pen/jKQoaj
-
 const rippleSettings = {
   maxSize: 100,
   animationSpeed: 2,
@@ -63,17 +61,14 @@ const ripples = [];
 
 
 
-const rippleStartStatus = 'start';
 
-const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 canvas.style.filter = `blur(${canvasSettings.blur}px)`;
 
 canvas.width = width
 canvas.height = height
 
-let animationFrame;
-
+ 
 // Function which is executed on mouse hover on canvas
 const canvasMouseOver = (e) => {
   const x = e.clientX;
@@ -97,7 +92,6 @@ const animation = () => {
       ripples.pop();
     }
   }
-  animationFrame = window.requestAnimationFrame(animation);
 };
 
 animation()
